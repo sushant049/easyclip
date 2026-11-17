@@ -1,0 +1,69 @@
+{
+  "name": "general",
+  "note": "Default for mixed content (vlogs, events, sports, tutorials). Balanced audio/visual/words.",
+  "analysis": {
+    "scene_threshold": 0.3,
+    "analysis_fps": 4,
+    "letterbox_ratio": 0.9
+  },
+  "moments": {
+    "top_n": 12,
+    "min_gap_s": 20,
+    "preroll_s": 5,
+    "postroll_s": 4,
+    "min_len_s": 12,
+    "max_len_s": 60,
+    "w_loud": 0.9,
+    "w_cuts": 0.6,
+    "w_words": 1.2,
+    "letterbox_penalty": 0.5
+  },
+  "hype_words": [
+    "no way",
+    "wow",
+    "oh my god",
+    "omg",
+    "insane",
+    "crazy",
+    "let's go",
+    "lets go",
+    "what",
+    "look at this",
+    "unbelievable",
+    "secret",
+    "the truth",
+    "mistake",
+    "never",
+    "best",
+    "worst"
+  ],
+  "spoiler_words": [
+    "leak",
+    "leaked",
+    "spoiler",
+    "ending"
+  ],
+  "reel": {
+    "fps": 30,
+    "crf": 20,
+    "lufs": -14,
+    "hook_s": 2.5,
+    "facecam_height": 0.35
+  },
+  "captions": {
+    "font": "Montserrat Black",
+    "fallback_font": "DejaVu Sans",
+    "size": 84,
+    "max_words": 3,
+    "max_chunk_s": 1.2,
+    "y": 0.7,
+    "primary": "&H00FFFFFF",
+    "highlight": "&H0000E5FF",
+    "outline": 6
+  },
+  "longform": {
+    "dead_min_s": 6,
+    "pad_s": 0.6,
+    "dead_loud_z": -0.4
+  }
+}

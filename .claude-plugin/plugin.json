@@ -1,0 +1,17 @@
+{
+  "name": "clip-harness",
+  "version": "0.5.0",
+  "description": "Free: paste a link or file, get vertical Shorts/Reels/TikToks. Local ffmpeg analysis, top-3 highlights, hook text, policy check - token-lean.",
+  "author": {
+    "name": "Sushant Kumar"
+  },
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "clipping",
+    "shorts",
+    "reels",
+    "tiktok",
+    "ffmpeg"
+  ]
+}

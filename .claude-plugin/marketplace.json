@@ -1,0 +1,13 @@
+{
+  "name": "clip-harness",
+  "owner": {
+    "name": "Sushant Kumar"
+  },
+  "plugins": [
+    {
+      "name": "clip-harness",
+      "source": "./",
+      "description": "Free video clipping: link or file in, vertical clips out."
+    }
+  ]
+}

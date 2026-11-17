@@ -1,0 +1,80 @@
+{
+  "manifest_version": "0.4",
+  "name": "clip-harness",
+  "display_name": "Clip Harness",
+  "version": "0.5.0",
+  "description": "Free: turn any long video or link into Shorts/Reels/TikToks - locally, token-lean. Top 3 moments, one clip at a time.",
+  "long_description": "Paste a file path or a YouTube/Twitch/Kick link. Clip Harness analyses the video on your computer, finds the top 3 moments and renders vertical clips with hook text, plus a pre-posting policy check. Claude only reads short tables, never video frames. Want batch clips, captions, recaps, thumbnails, chat spikes and more? Get Clip Harness Pro.",
+  "author": {
+    "name": "Sushant Kumar"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "uv",
+    "entry_point": "src/server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${__dirname}",
+        "src/server.py"
+      ],
+      "env": {
+        "CLIP_HARNESS_DIR": "${user_config.output_dir}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "doctor",
+      "description": "Check setup"
+    },
+    {
+      "name": "analyze",
+      "description": "Analyse a video file or link"
+    },
+    {
+      "name": "find_moments",
+      "description": "Top 3 highlight moments"
+    },
+    {
+      "name": "make_clip",
+      "description": "Render one vertical clip"
+    },
+    {
+      "name": "policy_check",
+      "description": "Pre-posting risk check"
+    }
+  ],
+  "user_config": {
+    "output_dir": {
+      "type": "directory",
+      "title": "Output folder",
+      "description": "Where downloads, analysis and finished clips are saved",
+      "default": "${HOME}/ClipHarness",
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "linux",
+      "win32"
+    ],
+    "runtimes": {
+      "python": ">=3.10"
+    }
+  },
+  "keywords": [
+    "video",
+    "clips",
+    "shorts",
+    "reels",
+    "tiktok",
+    "podcast",
+    "gaming",
+    "ffmpeg"
+  ],
+  "license": "MIT"
+}
