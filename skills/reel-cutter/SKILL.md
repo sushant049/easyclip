@@ -9,7 +9,7 @@ description: Render a vertical 9:16 YouTube Short, Instagram Reel or TikTok from
 ```bash
 $CH reel <name> <start> <end> <file>.mp4 --layout blur|fill [--hook "TEXT"]
 ```
-Times: seconds or mm:ss (use a moment's start/end). Output 1080x1920 H.264, -14 LUFS, in `~/ClipHarness/<name>/out/`.
+Times: seconds or mm:ss (use a moment's start/end). Output 1080x1920 H.264, -14 LUFS, in `~/EasyClip/<name>/out/`.
 
 | Footage | Layout |
 |---|---|

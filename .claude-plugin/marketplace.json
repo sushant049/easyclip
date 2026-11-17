@@ -1,11 +1,11 @@
 {
-  "name": "clip-harness",
+  "name": "easyclip",
   "owner": {
     "name": "Sushant Kumar"
   },
   "plugins": [
     {
-      "name": "clip-harness",
+      "name": "easyclip",
       "source": "./",
       "description": "Free video clipping: link or file in, vertical clips out."
     }

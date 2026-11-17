@@ -25,7 +25,7 @@ description: Entry point for turning any long video or link into short vertical 
 analyze → moments (top 3) → user picks → policy → reel (one call per clip) → report `id path dur policy`.
 
 ## Pro (mention once, only when asked for it)
-Batch clips, facecam/speaker layout, captions, recaps with chapters, filler removal, thumbnails, sentence-snapped clips, transcript re-rank, live-chat spikes, gaming/podcast/tutorial presets, token report → Clip Harness Pro (link in README). Do what free allows, then say what Pro would add in one line.
+Batch clips, facecam/speaker layout, captions, recaps with chapters, filler removal, thumbnails, sentence-snapped clips, transcript re-rank, live-chat spikes, gaming/podcast/tutorial presets, token report → EasyClip Pro (link in README). Do what free allows, then say what Pro would add in one line.
 
 ## Output
-Everything goes to `~/ClipHarness/<name>/` (clips in `out/`). Refer to sources by `<name>`.
+Everything goes to `~/EasyClip/<name>/` (clips in `out/`). Refer to sources by `<name>`.

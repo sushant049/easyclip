@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build dist/clip-harness-<ver>.mcpb : copies the CLI + presets in, then packs with the official mcpb CLI.
+# Build dist/easyclip-<ver>.mcpb : copies the CLI + presets in, then packs with the official mcpb CLI.
 set -euo pipefail
 cd "$(dirname "$0")"
 cp ../scripts/ch.py src/ch.py

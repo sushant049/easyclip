@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""clip-harness (free edition) CLI: every heavy step runs here so Claude reads short TSV, not video.
+"""easyclip (free edition) CLI: every heavy step runs here so Claude reads short TSV, not video.
 
 Needs Python 3.9+ and ffmpeg (system, or pip-bundled imageio-ffmpeg). Optional: faster-whisper (captions).
 Usage: python3 ch.py <command> [args]   (run with -h for each command)
@@ -8,8 +8,8 @@ import argparse, json, math, os, re, shutil, statistics, subprocess, sys, time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PRO_URL = "https://polar.sh/YOUR-STORE"  # <- replace with your Pro checkout link
-PRO = f"Pro feature - get Clip Harness Pro: {PRO_URL}"
+PRO_URL = "https://dodo.pe/easyclip-pro-sushantkr49"
+PRO = f"Pro feature - get EasyClip Pro: {PRO_URL}"
 NL = "\\N"  # ASS line break
 FFQ = ["-hide_banner", "-loglevel", "error", "-nostdin", "-y"]
 
@@ -56,7 +56,7 @@ def preset(name):
     return json.loads(p.read_text())
 
 
-BASE = Path(os.environ.get("CLIP_HARNESS_DIR", "~/ClipHarness")).expanduser()
+BASE = Path(os.environ.get("EASYCLIP_DIR", "~/EasyClip")).expanduser()
 
 
 def workdir(src, base=None):
@@ -447,8 +447,8 @@ def cmd_doctor(a):
     try:
         BASE.mkdir(parents=True, exist_ok=True); (BASE / ".w").write_text("x"); (BASE / ".w").unlink(); line("output dir", True, str(BASE))
     except Exception as e:
-        line("output dir", False, f"{BASE}: {e}  (set CLIP_HARNESS_DIR)")
-    print(f"presets\t{', '.join(p.stem for p in sorted((ROOT / 'presets').glob('*.json')))}  (default {os.environ.get('CLIP_HARNESS_PRESET', 'general')})")
+        line("output dir", False, f"{BASE}: {e}  (set EASYCLIP_DIR)")
+    print(f"presets\t{', '.join(p.stem for p in sorted((ROOT / 'presets').glob('*.json')))}  (default {os.environ.get('EASYCLIP_PRESET', 'general')})")
     print("RESULT READY" if ok else "RESULT FIX THE MISS LINES")
 
 
@@ -460,16 +460,16 @@ def main():
     p = sp.add_parser("analyze", help="probe + loudness + scene cuts + letterbox (cached)")
     p.add_argument("src", help="video file OR link (YouTube/Twitch/Kick...)"); p.add_argument("--out"); p.add_argument("--audio", type=int, default=0)
     p.add_argument("--from", dest="frm", help="link only: download from this time"); p.add_argument("--to", help="link only: download until")
-    p.add_argument("--preset", default=os.environ.get("CLIP_HARNESS_PRESET", "general")); p.add_argument("--force", action="store_true"); p.set_defaults(f=cmd_analyze)
+    p.add_argument("--preset", default=os.environ.get("EASYCLIP_PRESET", "general")); p.add_argument("--force", action="store_true"); p.set_defaults(f=cmd_analyze)
     p = sp.add_parser("moments", help="rank highlight windows -> moments.tsv")
     p.add_argument("work"); p.add_argument("--top", type=int, default=12); p.add_argument("--words")
-    p.add_argument("--preset", default=os.environ.get("CLIP_HARNESS_PRESET", "general")); p.set_defaults(f=cmd_moments)
+    p.add_argument("--preset", default=os.environ.get("EASYCLIP_PRESET", "general")); p.set_defaults(f=cmd_moments)
 
     p = sp.add_parser("reel", help="render a 9:16 reel")
     p.add_argument("src"); p.add_argument("start"); p.add_argument("end"); p.add_argument("out")
     p.add_argument("--layout", default="blur", help="blur | fill"); p.add_argument("--cam"); p.add_argument("--hook")
     p.add_argument("--audio", help="track index(es) to mix, e.g. 0,1"); p.add_argument("--fps", type=int)
-    p.add_argument("--preset", default=os.environ.get("CLIP_HARNESS_PRESET", "general")); p.set_defaults(f=cmd_reel)
+    p.add_argument("--preset", default=os.environ.get("EASYCLIP_PRESET", "general")); p.set_defaults(f=cmd_reel)
 
 
 
@@ -477,7 +477,7 @@ def main():
     p = sp.add_parser("policy", help="pre-post risk check")
     p.add_argument("--work"); p.add_argument("--start"); p.add_argument("--end"); p.add_argument("--title"); p.add_argument("--desc")
     p.add_argument("--no-voice", action="store_true"); p.add_argument("--no-captions", action="store_true")
-    p.add_argument("--preset", default=os.environ.get("CLIP_HARNESS_PRESET", "general")); p.set_defaults(f=cmd_policy)
+    p.add_argument("--preset", default=os.environ.get("EASYCLIP_PRESET", "general")); p.set_defaults(f=cmd_policy)
 
     p = sp.add_parser("doctor", help="check setup: python, ffmpeg, yt-dlp, whisper, fonts"); p.set_defaults(f=cmd_doctor)
 

@@ -1,4 +1,4 @@
-"""clip-harness (free edition) MCP server - thin wrapper over ch.py; tools return short text tables, never video."""
+"""easyclip (free edition) MCP server - thin wrapper over ch.py; tools return short text tables, never video."""
 import os
 import subprocess
 import sys
@@ -8,19 +8,19 @@ from mcp.server.fastmcp import FastMCP
 
 HERE = Path(__file__).resolve().parent
 CH = next((p for p in (HERE / "ch.py", HERE.parent.parent / "scripts" / "ch.py") if p.exists()), None)
-BASE = Path(os.environ.get("CLIP_HARNESS_DIR") or "~/ClipHarness").expanduser()
-os.environ["CLIP_HARNESS_DIR"] = str(BASE)
-PRO_URL = "https://polar.sh/YOUR-STORE"  # <- replace with your Pro checkout link
+BASE = Path(os.environ.get("EASYCLIP_DIR") or "~/EasyClip").expanduser()
+os.environ["EASYCLIP_DIR"] = str(BASE)
+PRO_URL = "https://dodo.pe/easyclip-pro-sushantkr49"
 
-RULES = f"""Clip Harness (free) - token rules:
+RULES = f"""EasyClip (free) - token rules:
 1. Never open video/audio files. Work only from tool text output.
 2. Pipeline: analyze -> find_moments -> user picks -> policy_check -> make_clip (one per call).
 3. Refer to sources by the `name` analyze prints. Long links: always pass start/end.
 4. Only clip the user's own content or content they may clip. Replies terse: tables, exact paths.
 5. If the user asks for batch clips, captions, facecam layout, recaps, thumbnails, chat spikes or more than 3 moments,
-   say once that it's in Clip Harness Pro ({PRO_URL}) and do what the free tools allow."""
+   say once that it's in EasyClip Pro ({PRO_URL}) and do what the free tools allow."""
 
-mcp = FastMCP("clip-harness", instructions=RULES)
+mcp = FastMCP("easyclip", instructions=RULES)
 
 
 def _ch(*args, timeout=3 * 3600):

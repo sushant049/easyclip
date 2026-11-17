@@ -1,5 +1,5 @@
 [project]
-name = "clip-harness-mcp"
+name = "easyclip-mcp"
 version = "0.5.0"
 description = "MCP server: turn any long video or link into shorts, reels and recaps, token-lean"
 requires-python = ">=3.10"

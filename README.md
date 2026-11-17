@@ -1,4 +1,4 @@
-# ✂️ Clip Harness
+# ✂️ EasyClip
 
 **Paste a link. Get Shorts.** Turn any long video - streams, gameplay, podcasts, vlogs - into vertical clips by chatting with Claude. Free and open source.
 
@@ -7,6 +7,15 @@
 ```
 
 <!-- DEMO: replace with your 30-second demo GIF -->
+
+### From a full stream to ready-to-post clips
+| The full stream: moments EasyClip picked | The clips it made |
+|---|---|
+| ![Preview sheet of a full stream with facecam: three ranked moments, three frames each](docs/sample-video-preview-sheet-with-streamer.jpg) | ![Three vertical clips: streamer's facecam on top, gameplay below, word-by-word captions](docs/video-with-streamer-cut.jpg) |
+
+*Facecam layout and word-by-word captions are [Pro](#-easyclip-pro) features.*
+
+[![Upgrade to Pro](docs/upgrade-to-pro.png)](https://dodo.pe/easyclip-pro-sushantkr49)
 
 ### Why it's different
 - **Your video never goes to the AI.** ffmpeg analyses it on your computer; Claude reads a 5-line table. A 2-hour stream costs about as many tokens as a chat message.
@@ -18,17 +27,17 @@
 
 **Claude Desktop - one click**
 1. Install `uv` once: Windows `winget install astral-sh.uv` · macOS `brew install uv` · Linux `curl -LsSf https://astral.sh/uv/install.sh | sh`
-2. Download `clip-harness-0.5.0.mcpb` from [Releases](../../releases) and double-click it.
+2. Download `easyclip-0.5.0.mcpb` from [Releases](../../releases) and double-click it.
 3. In a new chat: *"run doctor, then clip <link> from 0:00 to 10:00"*.
 
 **Claude Code - skills plugin**
 ```
-/plugin marketplace add <you>/clip-harness
-/plugin install clip-harness@clip-harness
+/plugin marketplace add <you>/easyclip
+/plugin install easyclip@easyclip
 ```
 Needs ffmpeg + yt-dlp: run `setup.ps1` (Windows) or `bash setup.sh` (macOS/Linux).
 
-**Claude Code - MCP:** `claude mcp add clip-harness -- uv run --directory /path/to/clip-harness/mcp src/server.py`
+**Claude Code - MCP:** `claude mcp add easyclip -- uv run --directory /path/to/easyclip/mcp src/server.py`
 
 ## What's in the free edition
 | Tool | Does |
@@ -39,7 +48,11 @@ Needs ffmpeg + yt-dlp: run `setup.ps1` (Windows) or `bash setup.sh` (macOS/Linux
 | `policy_check` | PASS / WARN / BLOCK before posting |
 | `doctor` | Checks your setup and tells you the exact fix |
 
-## ⚡ Clip Harness Pro
+![Sample 9:16 clip: blur layout with the hook text 'What he found behind the store' above the gameplay](docs/sample-clip.jpg)
+
+*A free-edition clip: blur layout and hook text, 1080x1920.*
+
+## ⚡ EasyClip Pro
 For creators and clippers posting every day.
 
 | | Free | **Pro** |
@@ -69,13 +82,18 @@ For creators and clippers posting every day.
 - **Thumbnails** - picks the sharpest frame near the peak, boosts colour and adds a bold title, 1280x720 ready for upload.
 - **Presets** - tuned scoring for gaming, podcast, tutorial (screen recordings) and general footage.
 - **Preview image** - a contact sheet of the picks so you can approve before rendering.
+
+  ![Preview sheet: six ranked moments (m01-m06), three frames each with timestamps](docs/preview-sheet.jpg)
+
 - **Saved channel settings** - remembers your layout, hook style, caption style and preset per channel.
 - **Token report** - shows exactly how many tokens each clip cost.
 - **Policy check** - the same PASS / WARN / BLOCK check, which Claude runs for each clip it cuts.
 
 12 MCP tools and 10 skills. Single-user license, up to 3 computers.
 
-**→ [Get Clip Harness Pro](https://polar.sh/YOUR-STORE)** - one-time payment, 12 months of updates.
+[![Upgrade to Pro](docs/upgrade-to-pro.png)](https://dodo.pe/easyclip-pro-sushantkr49)
+
+One-time payment, 12 months of updates. **[Get EasyClip Pro →](https://dodo.pe/easyclip-pro-sushantkr49)**
 
 ## CLI
 Everything the AI does, you can run yourself: `python3 scripts/ch.py doctor | analyze | moments | reel | policy` (Windows: `python scripts\ch.py ...`).
@@ -83,4 +101,9 @@ Everything the AI does, you can run yourself: `python3 scripts/ch.py doctor | an
 ## Fair use
 Clip content you own or have permission to clip. The policy check is a heuristic, not legal advice.
 
-MIT licensed. If Clip Harness saved you time, ⭐ the repo and tag your clips **#ClipHarness**.
+MIT licensed. If EasyClip saved you time, ⭐ the repo and tag your clips **#EasyClip**.
+
+## Made by Sushant Kumar
+[![Sushant Kumar - LinkedIn profile](docs/author.png)](https://www.linkedin.com/in/sushant-k28/)
+
+[LinkedIn](https://www.linkedin.com/in/sushant-k28/) · [X @sushantkr49](https://x.com/sushantkr49)
