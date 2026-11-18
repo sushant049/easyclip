@@ -1,6 +1,26 @@
+<div align="center">
+
 # ✂️ EasyClip
 
-**Paste a link. Get Shorts.** Turn any long video - streams, gameplay, podcasts, vlogs - into vertical clips by chatting with Claude. Free and open source.
+**Turn [Claude Code](https://www.anthropic.com/claude-code) or [Claude Desktop](https://claude.ai/download) into a Shorts machine.**
+
+Any long video - streams, gameplay, podcasts, vlogs - into vertical clips. ffmpeg does the video work on your computer; Claude never sees a frame.
+
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Plugin-D97757?logo=claude&logoColor=white)](#install-2-minutes)
+[![Claude Desktop](https://img.shields.io/badge/Claude_Desktop-Extension-D97757?logo=claude&logoColor=white)](https://github.com/sushant049/easyclip/releases/latest)
+[![MCP](https://img.shields.io/badge/MCP-5_tools-1f6feb)](#whats-in-the-free-edition)
+[![Skills](https://img.shields.io/badge/Skills-5-8250df)](skills)
+[![Version](https://img.shields.io/github/v/release/sushant049/easyclip?label=version&color=0969da)](https://github.com/sushant049/easyclip/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f)](LICENSE)
+
+[![Powered by ffmpeg](https://img.shields.io/badge/Powered_by-ffmpeg-007808?logo=ffmpeg&logoColor=white)](https://ffmpeg.org)
+[![Stars](https://img.shields.io/github/stars/sushant049/easyclip?logo=github&color=e3b341)](https://github.com/sushant049/easyclip/stargazers)
+[![Follow on X](https://img.shields.io/badge/Follow-@sushantkr49-000000?logo=x&logoColor=white)](https://x.com/sushantkr49)
+[![Get Pro](https://img.shields.io/badge/Get-EasyClip_Pro-2563eb)](https://dodo.pe/easyclip-pro-sushantkr49)
+
+*"Paste a LINK → Claude finds the MOMENTS → You post the SHORTS"*
+
+</div>
 
 ```
 > clip https://youtube.com/watch?v=... from 12:00 to 30:00 and make shorts from the best moments
@@ -32,7 +52,7 @@
 
 **Claude Code - skills plugin**
 ```
-/plugin marketplace add <you>/easyclip
+/plugin marketplace add sushant049/easyclip
 /plugin install easyclip@easyclip
 ```
 Needs ffmpeg + yt-dlp: run `setup.ps1` (Windows) or `bash setup.sh` (macOS/Linux).
@@ -103,7 +123,17 @@ Clip content you own or have permission to clip. The policy check is a heuristic
 
 MIT licensed. If EasyClip saved you time, ⭐ the repo and tag your clips **#EasyClip**.
 
-## Made by Sushant Kumar
+## Star History
+
+<a href="https://www.star-history.com/?repos=sushant049%2Feasyclip&type=timeline&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=sushant049/easyclip&type=timeline&theme=dark&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=sushant049/easyclip&type=timeline&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=sushant049/easyclip&type=timeline&legend=bottom-right" />
+ </picture>
+</a>
+
+## About the author
 [![Sushant Kumar - LinkedIn profile](docs/author.png)](https://www.linkedin.com/in/sushant-k28/)
 
 [LinkedIn](https://www.linkedin.com/in/sushant-k28/) · [X @sushantkr49](https://x.com/sushantkr49)
